@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>深圳市玖陆零壹科技有限责任公司</title>
+<meta name="description" content="深圳市玖陆零壹科技有限责任公司 —— 专注移动互联网轻娱乐内容社区产品的研发与运营。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%232b59ff'/><text x='32' y='44' font-size='30' font-family='Arial' font-weight='700' fill='white' text-anchor='middle'>9601</text></svg>">
+<style>
+  :root{
+    --ink:#141726; --ink-soft:#4a4f63; --muted:#8a8fa3;
+    --brand:#2b59ff; --brand-deep:#1b3bc4; --accent:#ff6b57;
+    --bg:#ffffff; --bg-soft:#f5f7fb; --line:#e7eaf2; --radius:16px;
+    --wrap:1120px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+  .btn{display:inline-block;padding:12px 24px;border-radius:999px;font-weight:600;font-size:15px;transition:.2s}
+  .btn-primary{background:var(--brand);color:#fff}
+  .btn-primary:hover{background:var(--brand-deep)}
+  .btn-ghost{border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--brand);color:var(--brand)}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brand)}
+
+  /* header */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:.02em}
+  .logo .mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--brand),#5a7bff);color:#fff;display:grid;place-items:center;font-size:13px;font-weight:800}
+  .nav-links{display:flex;gap:30px;font-size:15px;color:var(--ink-soft)}
+  .nav-links a:hover{color:var(--brand)}
+  @media(max-width:760px){.nav-links{display:none}}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;background:radial-gradient(1200px 500px at 78% -10%,#e9efff 0,transparent 60%),var(--bg)}
+  .hero-inner{padding:96px 0 84px;max-width:760px}
+  .hero h1{font-size:clamp(34px,5vw,56px);line-height:1.12;font-weight:800;letter-spacing:-.01em}
+  .hero h1 .g{background:linear-gradient(90deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p{margin-top:22px;font-size:19px;color:var(--ink-soft);max-width:620px}
+  .hero .cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+
+  section{padding:84px 0}
+  .section-head{max-width:620px;margin-bottom:44px}
+  .section-head h2{font-size:clamp(26px,3.4vw,36px);font-weight:800;margin-top:10px;letter-spacing:-.01em}
+  .section-head p{margin-top:14px;color:var(--ink-soft);font-size:17px}
+
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:860px){.grid3{grid-template-columns:1fr}}
+  .card{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+  .card .ic{width:46px;height:46px;border-radius:12px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;font-size:22px;margin-bottom:18px}
+  .card h3{font-size:19px;font-weight:700}
+  .card p{margin-top:10px;color:var(--ink-soft);font-size:15px}
+
+  /* product */
+  .product{background:var(--bg-soft)}
+  .product-row{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  @media(max-width:860px){.product-row{grid-template-columns:1fr}}
+  .product-row h2{font-size:clamp(26px,3.4vw,34px);font-weight:800}
+  .product-row ul{margin-top:22px;list-style:none;display:grid;gap:14px}
+  .product-row li{padding-left:30px;position:relative;color:var(--ink-soft);font-size:16px}
+  .product-row li::before{content:"";position:absolute;left:0;top:9px;width:16px;height:16px;border-radius:50%;background:var(--brand);opacity:.16}
+  .product-row li::after{content:"✓";position:absolute;left:3px;top:4px;color:var(--brand);font-size:12px;font-weight:800}
+  .phone{aspect-ratio:9/16;max-width:280px;margin:0 auto;border-radius:34px;border:10px solid #10131f;background:linear-gradient(160deg,#2b59ff,#7d5bff 55%,#ff6b57);position:relative;box-shadow:0 30px 60px -20px rgba(43,89,255,.45)}
+  .phone .app{position:absolute;inset:14px;border-radius:22px;background:rgba(255,255,255,.12);display:grid;place-items:center;text-align:center;color:#fff}
+  .phone .app b{font-size:28px;font-weight:800;letter-spacing:.04em}
+  .phone .app span{display:block;margin-top:8px;font-size:13px;opacity:.9}
+
+  /* about */
+  .facts{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:8px}
+  @media(max-width:640px){.facts{grid-template-columns:1fr}}
+  .facts div{padding:22px 26px;border-bottom:1px solid var(--line)}
+  .facts div:nth-child(odd){border-right:1px solid var(--line)}
+  @media(max-width:640px){.facts div:nth-child(odd){border-right:none}}
+  .facts dt{font-size:13px;color:var(--muted);font-weight:600}
+  .facts dd{margin-top:6px;font-size:16px;font-weight:600;color:var(--ink)}
+
+  /* contact */
+  .contact{background:linear-gradient(135deg,#141726,#232a45);color:#fff}
+  .contact h2{color:#fff}
+  .contact .section-head p{color:#b9c0d6}
+  .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:10px}
+  @media(max-width:760px){.contact-grid{grid-template-columns:1fr}}
+  .contact-grid a,.contact-grid div{display:block;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:26px}
+  .contact-grid .k{font-size:13px;color:#aab2cc}
+  .contact-grid .v{margin-top:8px;font-size:17px;font-weight:600;word-break:break-all}
+  .contact-grid a:hover{border-color:var(--brand)}
+
+  footer{background:#0f1220;color:#8890a8;font-size:14px;padding:34px 0}
+  .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .foot a:hover{color:#fff}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo"><span class="mark">9601</span>玖陆零壹科技</div>
+    <nav class="nav-links">
+      <a href="#business">业务能力</a>
+      <a href="#product">产品</a>
+      <a href="#about">关于我们</a>
+      <a href="#contact">联系我们</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary">联系我们</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="eyebrow">SHENZHEN 9601 TECHNOLOGY</div>
+      <h1>让每一次分享<br>都更<span class="g">有趣、更可信</span></h1>
+      <p>深圳市玖陆零壹科技有限责任公司,专注移动互联网轻娱乐内容社区产品的研发与运营,致力于用技术为用户打造健康、优质的内容分享与互动体验。</p>
+      <div class="cta">
+        <a href="#product" class="btn btn-primary">了解我们的产品</a>
+        <a href="#contact" class="btn btn-ghost">商务合作</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="business">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">业务能力</div>
+        <h2>我们做什么</h2>
+        <p>围绕内容社区场景,构建从内容生产、分发、审核到互动的全链路技术能力。</p>
+      </div>
+      <div class="grid3">
+        <div class="card">
+          <div class="ic">📱</div>
+          <h3>移动应用研发</h3>
+          <p>iOS / Android 原生应用及跨端产品研发,提供流畅、稳定、体验优先的移动内容社区。</p>
+        </div>
+        <div class="card">
+          <div class="ic">🛡️</div>
+          <h3>内容安全与审核</h3>
+          <p>机器审核结合人工复核的多层内容治理体系,保障平台内容合法合规、生态健康。</p>
+        </div>
+        <div class="card">
+          <div class="ic">✨</div>
+          <h3>智能推荐与运营</h3>
+          <p>基于兴趣的个性化内容推荐与精细化运营能力,连接优质内容与真实用户。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="product" class="product">
+    <div class="wrap">
+      <div class="product-row">
+        <div>
+          <div class="eyebrow">旗下产品</div>
+          <h2>对了么 · 吃瓜</h2>
+          <p style="margin-top:16px;color:var(--ink-soft);font-size:17px">一款轻娱乐吃瓜内容社区 App —— 浏览热点资讯、关注感兴趣的账号、评论互动、发布分享。让用户以轻松的方式发现和讨论有趣的内容。</p>
+          <ul>
+            <li>热点内容浏览与个性化推荐</li>
+            <li>关注、评论、点赞等社交互动</li>
+            <li>用户原创内容发布与话题参与</li>
+            <li>健全的举报、审核与未成年人保护机制</li>
+          </ul>
+        </div>
+        <div class="phone"><div class="app"><div><b>对了么</b><span>吃瓜内容社区</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">关于我们</div>
+        <h2>深圳市玖陆零壹科技有限责任公司</h2>
+        <p>公司专注于移动互联网内容社区产品的研发与运营,拥有独立的产品、技术与内容运营团队,坚持合法合规经营,持续为用户创造价值。</p>
+      </div>
+      <dl class="facts">
+        <div><dt>公司名称</dt><dd>深圳市玖陆零壹科技有限责任公司</dd></div>
+        <div><dt>成立日期</dt><dd>2026 年 03 月 09 日</dd></div>
+        <div><dt>统一社会信用代码</dt><dd>91440300MAK6TD0W47</dd></div>
+        <div><dt>主营领域</dt><dd>移动互联网内容社区 · 软件研发</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">联系我们</div>
+        <h2>期待与你合作</h2>
+        <p>无论是商务合作、用户反馈还是媒体咨询,都欢迎通过以下方式联系我们。</p>
+      </div>
+      <div class="contact-grid">
+        <a href="mailto:support@9601tech.com"><div class="k">电子邮箱</div><div class="v">support@9601tech.com</div></a>
+        <div><div class="k">公司地址</div><div class="v">深圳市龙岗区龙岗街道南联社区龙岗大道(龙岗段)4070号远洋新干线晶钻广场2栋ABC座A1608</div></div>
+        <div><div class="k">工作时间</div><div class="v">周一至周五 10:00–19:00</div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 深圳市玖陆零壹科技有限责任公司　保留所有权利</div>
+    <div><a href="mailto:support@9601tech.com">support@9601tech.com</a>　·　<span id="beian">ICP 备案:备案中</span></div>
+  </div>
+</footer>
+
+</body>
+</html>
