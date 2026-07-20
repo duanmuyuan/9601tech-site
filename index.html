@@ -5,7 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>深圳市玖陆零壹科技有限责任公司</title>
 <meta name="description" content="深圳市玖陆零壹科技有限责任公司 —— 专注移动互联网轻娱乐内容社区产品的研发与运营。">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%232b59ff'/><text x='32' y='44' font-size='30' font-family='Arial' font-weight='700' fill='white' text-anchor='middle'>9601</text></svg>">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icon-180.png">
 <style>
   :root{
     --ink:#141726; --ink-soft:#4a4f63; --muted:#8a8fa3;
@@ -63,10 +66,10 @@
   .product-row li{padding-left:30px;position:relative;color:var(--ink-soft);font-size:16px}
   .product-row li::before{content:"";position:absolute;left:0;top:9px;width:16px;height:16px;border-radius:50%;background:var(--brand);opacity:.16}
   .product-row li::after{content:"✓";position:absolute;left:3px;top:4px;color:var(--brand);font-size:12px;font-weight:800}
-  .phone{aspect-ratio:9/16;max-width:280px;margin:0 auto;border-radius:34px;border:10px solid #10131f;background:linear-gradient(160deg,#2b59ff,#7d5bff 55%,#ff6b57);position:relative;box-shadow:0 30px 60px -20px rgba(43,89,255,.45)}
-  .phone .app{position:absolute;inset:14px;border-radius:22px;background:rgba(255,255,255,.12);display:grid;place-items:center;text-align:center;color:#fff}
-  .phone .app b{font-size:28px;font-weight:800;letter-spacing:.04em}
-  .phone .app span{display:block;margin-top:8px;font-size:13px;opacity:.9}
+  .appshowcase{text-align:center}
+  .appshowcase .appicon{width:180px;height:180px;border-radius:40px;box-shadow:0 26px 54px -18px rgba(255,0,0,.5);display:block;margin:0 auto}
+  .appshowcase b{display:block;margin-top:22px;font-size:24px;font-weight:800}
+  .appshowcase span{display:block;margin-top:6px;color:var(--ink-soft);font-size:15px}
 
   /* about */
   .facts{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:8px}
@@ -162,7 +165,11 @@
             <li>健全的举报、审核与未成年人保护机制</li>
           </ul>
         </div>
-        <div class="phone"><div class="app"><div><b>对了么</b><span>吃瓜内容社区</span></div></div></div>
+        <div class="appshowcase">
+          <img class="appicon" src="assets/favicon-512.png" alt="对了么 App 图标">
+          <b>对了么</b>
+          <span>吃瓜内容社区</span>
+        </div>
       </div>
     </div>
   </section>
