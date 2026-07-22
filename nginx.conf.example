@@ -1,0 +1,40 @@
+# 9601tech.com 官网 Nginx 参考配置(备案通过后)
+# 放到 /etc/nginx/sites-available/9601tech-site 并软链到 sites-enabled/,nginx -t && systemctl reload nginx
+#
+# 🔴 红线:独立 server_name + 9601tech 自己的 SSL 证书,勿复用虾米 *.zzss.fun。
+
+# HTTP 80 → 301 跳 HTTPS
+server {
+    listen 80;
+    listen [::]:80;
+    server_name 9601tech.com www.9601tech.com;
+    return 301 https://9601tech.com$request_uri;
+}
+
+# HTTPS 443 主站
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name 9601tech.com www.9601tech.com;
+
+    # ⚠️ 换成 9601tech.com 自己的证书(独立主体签发)
+    ssl_certificate     /etc/nginx/ssl/9601tech.com.pem;
+    ssl_certificate_key /etc/nginx/ssl/9601tech.com.key;
+
+    root /var/www/9601tech-site;
+    index index.html;
+
+    # www → apex
+    if ($host = www.9601tech.com) { return 301 https://9601tech.com$request_uri; }
+
+    # Universal Links:AASA 必须 200、合法 JSON、无跳转。
+    # 文件无扩展名,显式给 JSON content-type(iOS 现代版本不强制,但规范些)。
+    location = /.well-known/apple-app-site-association {
+        default_type application/json;
+        add_header Cache-Control "no-cache";
+    }
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
