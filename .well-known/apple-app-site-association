@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appID": "TEAMID.com.9601tech.duile",
+        "paths": [ "/t/*", "/u/*" ]
+      }
+    ]
+  }
+}
